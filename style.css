@@ -1,0 +1,187 @@
+:root{
+    color-scheme: dark light;
+    --textColor: white;
+    --primaryColor:#e26e70;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fa {
+    font-family: 'FontAwesome'! Important; 
+}
+a{
+    all: unset;
+    cursor: pointer;
+}
+body{
+    height: 100vh;
+    background-image:linear-gradient(
+		45deg,
+		rgb(65, 88, 208) 0%,
+		rgb(200, 80, 192) 50%,
+		rgb(255, 204, 112) 100%
+	)
+}
+/* end resset css */
+#openButton{
+    margin-left: 50%;
+    margin-top: 50vh;
+    transform: translate(-50%,-50%);
+    padding: 20px 40px;
+    border: unset;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.mark{
+    display: none;
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 3s;
+}
+.popup{
+    width: 500px;
+    margin: 150px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--textColor);
+    animation: show linear 0.15s
+}
+@keyframes show{
+    from{margin-top: -150px;opacity: 0;}
+    to{margin-top: 0px;opacity: 1;}
+}
+.popup>*{
+    padding: 15px;
+}
+.popupHeader{
+    background-color:var(--primaryColor);
+    align-items: center;
+    color: var(--textColor);
+}
+.popupHeader h2, span {
+    display: inline-block;
+}
+.popupHeader > span {
+    float: right;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 27px;
+    cursor: pointer;
+}
+.popupBody h3 {
+    color: var(--primaryColor);
+}
+.popupBody a{
+    display: block;
+    text-align: center;
+}
+.popupBody a:hover{
+    background-color: var(--primaryColor);
+    transform: scale(2,2);
+}
+.popupFooter button {
+    border: unset;
+    float: right;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: var(--primaryColor);
+    border-radius: 6px;
+    color: var(--textColor);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer css */
+@media only screen and (max-width: 768px){
+    .footer>*:not(.copy) {
+        display: none;
+    }
+    .copy{
+        text-align: center;
+    }
+}
+
+.footer {
+    padding: 0;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    width: auto;
+    height: 1px;
+    z-index: 99;
+    display: block;
+}
+.footer .soc-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    float: right;
+    width: 24px;
+}
+.follow-label {
+    padding-right: 75px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    color: var(--textColor);
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    white-space: nowrap;
+    transform-origin: 100% 0;
+    text-align: right;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.copy a{
+    all: unset;
+    cursor: pointer;
+    color: var(--textColor);
+}
+.follow-label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    height: 1px;
+    background: rgba(0,0,0,.1);
+}
+.clear {
+    clear: both;
+}
+.footer .soc a {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--textColor);
+}
+
+/*end footer css*/
+
+
+
