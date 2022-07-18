@@ -1,5 +1,4 @@
 :root{
-    color-scheme: dark light;
     --textColor: white;
     --primaryColor:#e26e70;
 }
@@ -47,7 +46,7 @@ body{
     transition: transform 3s;
 }
 .popup{
-    width: 500px;
+    max-width: 500px;
     margin: 150px auto;
     border-radius: 5px;
     overflow: hidden;
